@@ -1,0 +1,45 @@
+/* 天気壁紙 紹介サイト 共通の見た目(トップとプライバシーポリシーで共用) */
+:root { --bg: #14161c; --text: #ececec; --muted: #a9adb8; --gold: #cba45a; --line: #2c303a; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+       font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+       font-size: 16px; line-height: 1.75; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 56px; }
+a { color: var(--gold); }
+h1, h2 { line-height: 1.5; font-weight: 700; }
+strong { font-weight: 700; }
+.site-name { margin: 0 0 40px; font-size: 16px; font-weight: 700; }
+.site-name a { text-decoration: none; }
+.nb { display: inline-block; white-space: nowrap; }
+.muted { color: var(--muted); font-size: 14px; }
+
+/* トップ */
+.hero { display: flex; gap: 56px; align-items: center; }
+.hero-shot { flex: 0 0 270px; }
+.hero-shot img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); }
+.hero-text h1 { margin: 0 0 16px; font-size: 32px; }
+.hero-text p { margin: 0 0 16px; }
+.button { display: inline-block; margin-top: 16px; padding: 14px 24px; border-radius: 8px;
+          background: var(--gold); color: #14161c; font-weight: 700; text-decoration: none; }
+.button:hover, .button:focus-visible { background: #dbb873; }
+.points { max-width: 640px; margin-top: 64px; }
+.points h2 { margin: 32px 0 4px; font-size: 18px; }
+.points p { margin: 0; }
+.foot { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14px; }
+
+/* プライバシーポリシー */
+.doc { max-width: 720px; }
+.doc h1 { margin: 0 0 8px; font-size: 24px; }
+.doc h2 { margin: 32px 0 8px; font-size: 18px; }
+.doc code { background: #23262f; padding: 1px 5px; border-radius: 4px; }
+
+@media (max-width: 700px) {
+  .wrap { padding: 24px 20px 40px; }
+  .site-name { margin-bottom: 24px; }
+  .hero { flex-direction: column; align-items: flex-start; gap: 28px; }
+  .hero-shot { flex: none; width: 200px; }
+  .hero-text h1 { font-size: 26px; }
+  .doc h1 { font-size: 20px; }
+  .button { display: block; text-align: center; }
+  .points { margin-top: 48px; }
+}
